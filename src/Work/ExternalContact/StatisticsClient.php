@@ -44,4 +44,20 @@ class StatisticsClient extends BaseClient
 
         return $this->httpPostJson('cgi-bin/externalcontact/get_user_behavior_data', $params);
     }
+
+    /**
+     * Get customer group statistics.
+     *
+     * @see https://work.weixin.qq.com/api/doc/90000/90135/92133
+     *
+     * @param array $data
+     *
+     * @return array|\EasyWeChat\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
+     * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
+     */
+    public function customerGroup(array $data = [])
+    {
+        return $this->httpPostJson('cgi-bin/externalcontact/groupchat/statistic', $data);
+    }
 }
