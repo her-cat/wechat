@@ -50,7 +50,7 @@ class TestCase extends BaseTestCase
     /**
      * Tear down the test case.
      */
-    public function tearDown()
+    protected function tearDown()
     {
         $this->finish();
         parent::tearDown();
